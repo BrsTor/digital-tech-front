@@ -25,8 +25,7 @@ export class SignUpComponent implements OnInit {
 
 
 
-  onSubmit(event:Event) {
-    event.preventDefault();
+  onSubmit() {
     console.log(this.signUpForm.value);
   }
 
