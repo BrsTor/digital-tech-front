@@ -1,1 +1,5 @@
-<p>homepage works!</p>
+<div class="posts-container">
+  <div *ngFor="let post of posts" class="my-2">
+    <app-post [post]="post"></app-post>
+  </div>
+</div>

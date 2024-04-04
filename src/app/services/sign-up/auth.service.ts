@@ -30,7 +30,7 @@ export class AuthService {
     })
   }
 
-  /* whoAmI(): Observable<any> {
-    return this.http.get<any>(environment.baseApiUrl+'auth/whoami', { withCredentials: true })
-  } */
+  getUserByUsername(username: string){
+    return this.http.get<User>(environment.baseApiUrl+'auth/?username='+username, { withCredentials: true })
+  }
 }
