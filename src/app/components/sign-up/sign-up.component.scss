@@ -1,0 +1,37 @@
+.help-block {
+  color: red;
+  font-size: small;
+  font-style: italic;
+  margin-left: 5px;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.container {
+  display: flex;
+  min-height: 90vh;
+}
+
+.row {
+  flex-grow: 1;
+}
+
+.form-container {
+  max-width: 400px; /* Adjust as needed */
+  width: 100%;
+  margin: auto;
+}
+
+form {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.btn-center {
+  display: block;
+  margin: auto; /* Center horizontally */
+}
