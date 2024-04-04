@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { SignUpService } from '../../services/sign-up/sign-up.service';
+import { AuthService } from '../../services/sign-up/auth.service';
 
 @Component({
   selector: 'sign-up',
@@ -9,7 +9,7 @@ import { SignUpService } from '../../services/sign-up/sign-up.service';
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss',
-  providers: [SignUpService]
+  providers: [AuthService]
 })
 
 export class SignUpComponent implements OnInit {
@@ -17,7 +17,7 @@ export class SignUpComponent implements OnInit {
   signUpForm!: FormGroup;
   userRoles = ['admin', 'user'];
 
-  constructor(private sigUpService: SignUpService) {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.signUpForm = new FormGroup({
@@ -32,7 +32,8 @@ export class SignUpComponent implements OnInit {
 
 
   onSubmit() {
-    this.sigUpService.createUser(this.signUpForm.value)
+
+    this.authService.createUser(this.signUpForm.value)
   }
 
 
