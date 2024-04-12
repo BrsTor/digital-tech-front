@@ -15,11 +15,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  signUp() {
-    // Implement sign in functionality
-    console.log('Sign Up clicked');
-  }
-
   signIn() {
     // Implement sign in functionality
     console.log('Sign In clicked');
