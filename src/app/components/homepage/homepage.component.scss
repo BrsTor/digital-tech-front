@@ -1,0 +1,10 @@
+.posts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.post-wrapper {
+  margin-bottom: 20px; /* Adjust margin as needed */
+}

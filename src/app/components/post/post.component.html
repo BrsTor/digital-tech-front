@@ -1,0 +1,21 @@
+<div class="card shadow-sm" style="width: 18rem;">
+  <div class="card-header d-flex align-items-center">
+    <div class="user-profile-image">
+      <img [src]="user?.avatar ? user?.avatar : 'assets/images/avatar.png'" class="rounded-circle profile-img  border border-info" alt="User Profile Image">
+    </div>
+    <a class="ms-2">{{post.author}}</a>
+  </div>
+  <img [src]="post.image" class="card-img-top img-fluid" *ngIf="post?.image" >
+  <div class="card-body">
+    <p class="card-text">{{post.message}}</p>
+    <hr>
+    <div class="d-flex justify-content-between">
+      <div>
+        <p class="card-text" style="font-size: smaller;">{{ post.location }}</p>
+      </div>
+      <div>
+        <p class="card-text" style="font-size: smaller;">{{ post.created_at | date }}</p>
+      </div>
+    </div>
+  </div>
+</div>
