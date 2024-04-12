@@ -22,7 +22,7 @@ export class AuthService {
   }
 
   logIn(body: any){
-    return this.http.post<User>(environment.baseApiUrl+'auth/signin', body).subscribe((resp) => {
+    return this.http.post<User>(environment.baseApiUrl+'auth/signin', body, { withCredentials: true}).subscribe((resp) => {
       localStorage.setItem('role', resp.role)
       this.router.navigate(['/homepage'])
     }, err => {
